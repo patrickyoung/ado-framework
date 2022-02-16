@@ -1,3 +1,7 @@
+parameters:
+  - name: config_object
+    type: object
+
 jobs:
   - deployment: DeployAzKeyVaultConfiguration
     displayName: Deploy Azure Key Vault Configuration
@@ -8,5 +12,11 @@ jobs:
       runOnce:
         deploy:
           steps:
-            - template: ./steps/configure.yml
-            - template: ./steps/test.yml
+            - task: Bash@3
+              displayName: "Say Hello from Configuration"
+              inputs:
+                env:
+                  PROP_1:  ${{ parameters.config_object.property_1 }}
+                targetType: 'inline'
+                script: 'echo "Hello from Configuration."'
+                failOnStdErr: true
