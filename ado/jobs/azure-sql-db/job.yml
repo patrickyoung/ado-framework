@@ -2,7 +2,7 @@ parameters:
   - name: config_object
     type: object
     default:
-      - property_1: "this is a test!!!"
+      property_1: "this is a test!!!"
 
 jobs:
   - deployment: DeployAzSQLConfiguration
