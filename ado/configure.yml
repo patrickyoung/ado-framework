@@ -6,7 +6,4 @@ stages:
   - stage: Configure_DevTest
     jobs:
       - template: ./jobs/azure-sql-db/job.yml
-        parameters: 
-          config_object: 
-            property_1: "This is a test!!!"
 
