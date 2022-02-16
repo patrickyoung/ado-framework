@@ -1,0 +1,12 @@
+jobs:
+  - deployment: DeployAzKeyVaultConfiguration
+    displayName: Deploy Azure Key Vault Configuration
+    pool:
+      vmImage: 'ubuntu-latest'
+    environment: "DevTest"
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+            - template: ./steps/configure.yml
+            - template: ./steps/test.yml
