@@ -3,7 +3,7 @@ steps:
     displayName: "Say Hello from Configuration"
     inputs:
       env:
-        PROP_1:  ${{ parameters.config_object.property_1 }}
+        PROP_1:  ${{ parameters.config_object[0] }}
       targetType: 'inline'
       script: 'echo "Hello from Configuration -> ${PROP_1}"'
       failOnStdErr: true
