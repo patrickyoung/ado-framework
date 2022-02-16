@@ -15,4 +15,6 @@ jobs:
         deploy:
           steps:
             - template: ./steps/configure.yml
+              parameters:
+                config_object: "${{ parameters.config_object }}"
             - template: ./steps/test.yml
