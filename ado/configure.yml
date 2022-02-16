@@ -7,7 +7,7 @@ stages:
     jobs:
       - template: ./jobs/azure-sql-db/job.yml
       - template: ./jobs/azure-key-vault/job.yml
-  - stage: "Configure #2"
+  - stage: "Configure 2"
     jobs:
       - template: ./jobs/azure-sql-db/job.yml
       - template: ./jobs/azure-key-vault/job.yml
