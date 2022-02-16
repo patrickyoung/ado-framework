@@ -3,7 +3,7 @@ jobs:
     displayName: Deploy Azure SQL Configuration
     pool:
       vmImage: 'ubuntu-latest'
-    environment: "DevTest"
+    environment: "env-devtest-cpy"
     strategy:
       runOnce:
         deploy:

@@ -3,7 +3,7 @@ jobs:
     displayName: Deploy Azure Key Vault Configuration
     pool:
       vmImage: 'ubuntu-latest'
-    environment: "DevTest"
+    environment: "env-uat-cpy"
     strategy:
       runOnce:
         deploy:
