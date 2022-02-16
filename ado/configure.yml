@@ -1,0 +1,8 @@
+name: Configure Data Product
+trigger: none
+pr: none
+
+stages:
+  - stage: Configure
+    jobs:
+      - template: ./jobs/azure-sql-db/job.yml

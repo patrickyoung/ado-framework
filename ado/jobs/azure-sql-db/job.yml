@@ -1,0 +1,12 @@
+jobs:
+  - deployment: DeployAzSQLConfiguration
+    displayName: Deploy Azure SQL Configuration
+    pool:
+      vmImage: 'ubuntu-latest'
+    environment: "DevTest"
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+            - template: ./steps/configure.yml
+            - template: ./steps/test.yml

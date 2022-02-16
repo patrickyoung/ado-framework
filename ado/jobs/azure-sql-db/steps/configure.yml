@@ -1,0 +1,7 @@
+steps:
+  - task: Bash@3
+    displayName: 'Say Hello from Configuration'
+    inputs:
+      targetType: 'inline'
+      script: 'echo "Hello from Configuration."'
+      failOnStdErr: true
