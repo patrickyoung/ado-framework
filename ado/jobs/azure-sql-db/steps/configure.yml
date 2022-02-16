@@ -2,8 +2,8 @@ steps:
   - task: Bash@3
     displayName: "Say Hello from Configuration"
     inputs:
-      env:
-        PROP_1:  "TEST"
       targetType: 'inline'
       script: 'echo "Hello from Configuration -> ${PROP_1}"'
       failOnStdErr: true
+    env:
+        PROP_1:  "${{ parameters.config_object.property_1 }}"
