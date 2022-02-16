@@ -1,9 +1,3 @@
-parameters:
-  - name: config_object
-    type: object
-    default:
-      property_1: "this is a test!!!"
-
 jobs:
   - deployment: DeployAzSQLConfiguration
     displayName: Deploy Azure SQL Configuration
@@ -15,6 +9,4 @@ jobs:
         deploy:
           steps:
             - template: ./steps/configure.yml
-              parameters:
-                config_object: "${{ parameters.config_object }}"
             - template: ./steps/test.yml

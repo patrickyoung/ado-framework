@@ -1,7 +1,0 @@
-steps:
-  - task: Bash@3
-    displayName: 'Say Hello from Test'
-    inputs:
-      targetType: 'inline'
-      script: 'echo "Hello from Test."'
-      failOnStdErr: true
