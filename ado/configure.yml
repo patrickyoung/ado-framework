@@ -16,12 +16,12 @@ stages:
             deploy:
               steps:
                 - checkout: self
-                  path: current_repo
+                  path: vars
                   clean: true
 
   - stage: Configure_DevTest
     variables:
-      - template: ../current_repo/vars/test-config.yml
+      - template: ../vars/test-config.yml
     jobs:
       - template: ./jobs/azure-sql-db/job.yml
 
