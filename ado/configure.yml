@@ -21,7 +21,7 @@ stages:
 
   - stage: Configure_DevTest
     variables:
-      - template: ../vars/test-config.yml
+      - template: /vars/test-config.yml@self
     jobs:
       - template: ./jobs/azure-sql-db/job.yml
 
