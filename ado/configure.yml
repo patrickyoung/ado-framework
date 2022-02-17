@@ -24,5 +24,7 @@ stages:
       - template: /ado/vars/test-config.yml@self
     jobs:
       - template: ./jobs/azure-sql-db/job.yml
+        parameters:
+          - property_1: $(property_1)
 
 

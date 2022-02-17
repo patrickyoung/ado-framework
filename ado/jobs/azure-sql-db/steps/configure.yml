@@ -6,4 +6,4 @@ steps:
       script: 'echo "Hello from Configuration -> ${PROP_1}"'
       failOnStdErr: true
     env:
-        PROP_1:  "$(property_1)"
+        PROP_1:  "$(azure_sql_bd.property_1)"
