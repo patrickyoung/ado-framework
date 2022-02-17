@@ -3,12 +3,20 @@ trigger: none
 pr: none
 
 stages:
-  - stage: Retrive_Configurations
-    pool:
-      vmImage: 'ubuntu-latest'
-    steps:
-      - checkout: self
-        clean: true
+  - stage: Retrive_Configuration
+    displayName: Retrive Configuration
+    jobs:
+      - deployment: 
+        displayName: Retrive Data Product Configuration
+        pool:
+          vmImage: 'ubuntu-latest'
+        environment: "env-devtest-cpy"
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - checkout: self
+                  clean: true
 
   - stage: Configure_DevTest
     variables:
