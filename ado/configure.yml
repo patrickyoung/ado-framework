@@ -5,9 +5,7 @@ pr: none
 stages:
   - stage: Configure_DevTest
     variables:
-      - name: config_object
-        value:
-          property_1: "HELLO from configuration.yml" 
+      - template: vars/test-config.yml
     jobs:
       - template: ./jobs/azure-sql-db/job.yml
 

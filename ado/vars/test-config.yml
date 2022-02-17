@@ -1,0 +1,2 @@
+variables:
+  property_1: "TEST FROM REMOTE CONFIG"
