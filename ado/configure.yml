@@ -4,6 +4,9 @@ pr: none
 
 stages:
   - stage: Retrive_Configurations
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
       - checkout: self
         clean: true
 
