@@ -3,6 +3,10 @@ trigger: none
 pr: none
 
 stages:
+  - stage: Retrive_Configurations
+      - checkout: self
+        clean: true
+
   - stage: Configure_DevTest
     variables:
       - template: vars/test-config.yml
