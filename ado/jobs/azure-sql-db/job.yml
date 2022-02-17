@@ -1,7 +1,3 @@
-parameters:
-  - name: config_path
-    type: string
-
 jobs:
   - deployment: DeployAzSQLConfiguration
     displayName: Deploy Azure SQL Configuration
