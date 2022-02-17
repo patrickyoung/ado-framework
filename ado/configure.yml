@@ -6,7 +6,7 @@ stages:
   - stage: Retrive_Configuration
     displayName: Retrive Configuration
     jobs:
-      template: ./jobs/git_repos/job.yml
+      - template: ./jobs/git_repos/job.yml
 
   - stage: Configure_DevTest
     variables:
