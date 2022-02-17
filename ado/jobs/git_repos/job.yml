@@ -1,0 +1,13 @@
+jobs:
+  - deployment: 
+    displayName: Retrive Data Product Configuration
+    pool:
+      vmImage: 'ubuntu-latest'
+    environment: "env-devtest-cpy"
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+            - checkout: self
+              path: vars
+              clean: true

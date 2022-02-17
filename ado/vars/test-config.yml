@@ -1,3 +1,2 @@
 variables:
-  azure_sql_db:
-    property_1: "TEST FROM REMOTE CONFIG"
+  property_1: "TEST FROM REMOTE CONFIG"

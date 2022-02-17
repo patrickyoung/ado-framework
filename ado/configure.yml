@@ -6,23 +6,11 @@ stages:
   - stage: Retrive_Configuration
     displayName: Retrive Configuration
     jobs:
-      - deployment: 
-        displayName: Retrive Data Product Configuration
-        pool:
-          vmImage: 'ubuntu-latest'
-        environment: "env-devtest-cpy"
-        strategy:
-          runOnce:
-            deploy:
-              steps:
-                - checkout: self
-                  path: vars
-                  clean: true
+      template: ./jobs/git_repos/job.yml
 
   - stage: Configure_DevTest
     variables:
       - template: /ado/vars/test-config.yml@self
     jobs:
       - template: ./jobs/azure-sql-db/job.yml
-
 
